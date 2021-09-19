@@ -30,13 +30,8 @@ def predict(data):
     model_dir_path = config["webapp_model_dir"]
     model = joblib.load(model_dir_path)
     prediction = model.predict(data).tolist()[0]
-    try:
-        if 3 <= prediction <= 8:
-            return prediction
-        else:
-            raise NotInRange
-    except NotInRange:
-        return "Unexpected result"
+    return prediction
+
 
 
 def get_schema(schema_path=schema_path):

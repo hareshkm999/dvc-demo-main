@@ -16,14 +16,27 @@ app = Flask(__name__, static_folder=static_dir,template_folder=template_dir)
 def index():
 
     if request.method == "POST":
+
+        air_temperature = float(request.form['air_temperature'])
+        rotational_speed = float(request.form['rotational_speed'])
+        torque = float(request.form['torque'])
+        wear = float(request.form['wear'])
+        failure = float(request.form['failure'])
+        twf = float(request.form['twf'])
+        hdf = float(request.form['hdf'])
+        pwf = float(request.form['pwf'])
+        osf = float(request.form['osf'])
+        rnf = float(request.form['rnf'])
+
+
+
+
         try:
             if request.form:
                 dict_req = dict(request.form)
                 response = prediction.form_response(dict_req)
+                print(dict_req)
                 return render_template("index.html", response=response)
-            elif request.json:
-                response = prediction.api_response(request.json)
-                return jsonify(response)
 
         except Exception as e:
             print(e)
