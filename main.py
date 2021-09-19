@@ -65,7 +65,7 @@ def predict():
             loaded_model = joblib.load(filename)
 
             prediction = str(list(loaded_model.predict([[air_temperature, rotational_speed, torque, wear, failure, twf, hdf, pwf, osf, rnf]])))
-
+            print(prediction)
 
 
             #return render_template('result.html', prediction=prediction)
