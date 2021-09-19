@@ -82,7 +82,7 @@ body {
       <div class="container">
          <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="/static/img/IMG_20190908_201516.png" alt="">
-            <h2>FIRST TABLE</h2>
+            <h2>MACHINE PROCESS TEMPARATURE PREDICTION</h2>
             <p class="lead">Fill below Values</p>
          </div>
          <div class="row">
@@ -96,7 +96,7 @@ body {
                <form action="{{ url_for('predict')}}"method="post" class="needs-validation" >
                   <div class="row">
                      <div class="col-md-6 mb-3">
-                        <label for="air_temperature">air_temperature = </label>
+                        <label for="air_temperature">air_temperature  </label>
                         <input type="text" class="form-control" id="air_temperature" name="air_temperature" placeholder="" value="" required>
                      </div>
                      <div class="col-md-6 mb-3">
@@ -173,6 +173,27 @@ body {
             </ul>
          </footer>
       </div>
+
+   <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/">DVC Challenge </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/hareshkm999/dvc-demo-main">source code</a>
+            </li>
+        </ul>
+    </div>
+   </nav>
+
+
+
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
